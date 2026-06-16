@@ -5,9 +5,11 @@ import CollegeVerify from './pages/signup/college_verify'
 import ProfileSetup from './pages/onBoarding/profileSetup'
 import Questions from './pages/onBoarding/questions'
 import Interests from './pages/onBoarding/interests'
+import DashboardHome from './pages/dashboard/home'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CreateAccount from './pages/signup/create_account'
+
 function App() {
 
   return (
@@ -22,6 +24,7 @@ function App() {
     <Route path="/profile_setup" element={<ProfileSetup/>}/>
     <Route path="/questions_for_you" element={<Questions/>}/>
     <Route path="/interests" element={<Interests/>}/>
+    <Route path="/home" element={<DashboardHome/>}/>
     </Routes></BrowserRouter>
    </>
   )
