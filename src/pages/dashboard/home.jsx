@@ -32,6 +32,7 @@ export default function DashboardHome() {
       <Sidebar
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
+        activeItem="Home"
       />
 
       {/* Page Content */}

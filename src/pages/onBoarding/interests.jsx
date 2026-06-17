@@ -103,7 +103,7 @@ export default function Interests() {
             </button>
           </Link>
 
-          <Link to="/dashboard" className="w-2/3">
+          <Link to="/home" className="w-2/3">
             <button
               className="
                 w-full

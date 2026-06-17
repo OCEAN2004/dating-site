@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Menu, User, LogOut } from "lucide-react";
+import { Link } from "react-router-dom";
+import ProfilePage from "../pages/dashboard/profilePage";
 
 export default function Navbar({ setSidebarOpen }) {
   const [profileOpen, setProfileOpen] = useState(false);
@@ -32,10 +34,12 @@ export default function Navbar({ setSidebarOpen }) {
 
           {profileOpen && (
             <div className="absolute right-0 mt-3 w-48 bg-white rounded-2xl shadow-lg border overflow-hidden">
+              <Link to="/profile">
               <button className="w-full flex items-center gap-3 px-4 py-3 hover:bg-pink-50 text-left">
                 <User size={18} />
                 Profile
               </button>
+              </Link>
 
               <button className="w-full flex items-center gap-3 px-4 py-3 hover:bg-pink-50 text-left text-red-500">
                 <LogOut size={18} />

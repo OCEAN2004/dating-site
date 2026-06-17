@@ -7,10 +7,13 @@ import {
   Settings,
   X,
 } from "lucide-react";
+import { Link } from "react-router-dom";
+import DashboardHome from "../pages/dashboard/home";
 
 export default function Sidebar({
   sidebarOpen,
   setSidebarOpen,
+  activeItem = null,
 }) {
   return (
     <>
@@ -49,32 +52,43 @@ export default function Sidebar({
           <SidebarItem
             icon={<Home size={24} />}
             label="Home"
-            active
+            active={activeItem === "Home"}
+            route="/home"
           />
 
           <SidebarItem
             icon={<Search size={24} />}
             label="Discover"
+            active={activeItem === "Discover"}
+            route="/discover"
           />
 
           <SidebarItem
             icon={<Heart size={24} />}
             label="Matches"
+            active={activeItem === "Matches"}
+            route="/matches"
           />
 
           <SidebarItem
             icon={<MessageCircle size={24} />}
             label="Chats"
+            active={activeItem === "Chats"}
+            route="/chats"
           />
 
           <SidebarItem
             icon={<Bell size={24} />}
             label="Notifications"
+            active={activeItem === "Notifications"}
+            route="/notifications"
           />
 
           <SidebarItem
             icon={<Settings size={24} />}
             label="Settings"
+            active={activeItem === "Settings"}
+            route="/settings"
           />
         </nav>
       </aside>
@@ -86,13 +100,15 @@ function SidebarItem({
   icon,
   label,
   active = false,
+  route,
 }) {
   return (
+    <Link to={route}>
     <button
-      className={`w-full flex items-center gap-4 px-5 py-4 rounded-2xl transition-all ${
+      className={`w-full flex items-center gap-4 px-5 py-4 rounded-2xl transition-all duration-200 ${
         active
-          ? "bg-pink-100 text-pink-600"
-          : "text-gray-700 hover:bg-gray-100"
+          ? "bg-pink-100 text-pink-600 shadow-sm"
+          : "text-gray-700 hover:bg-pink-50 hover:text-pink-500"
       }`}
     >
       {icon}
@@ -101,5 +117,6 @@ function SidebarItem({
         {label}
       </span>
     </button>
+    </Link>
   );
 }
