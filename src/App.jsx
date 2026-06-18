@@ -7,6 +7,7 @@ import Questions from './pages/onBoarding/questions'
 import Interests from './pages/onBoarding/interests'
 import DashboardHome from './pages/dashboard/home'
 import ProfilePage from './pages/dashboard/profilePage'
+import ProfilePagePOV from './pages/dashboard/profilePagePOV'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CreateAccount from './pages/signup/create_account'
@@ -28,7 +29,9 @@ function App() {
     <Route path="/interests" element={<Interests/>}/>
     <Route path="/home" element={<DashboardHome/>}/>
     <Route path="/profile" element={<ProfilePage/>}/>
-     <Route path="/edit_profile" element={<EditProfile/>}/>
+    <Route path="/theirprofile" element={<ProfilePagePOV/>}/>
+    <Route path="/edit_profile" element={<EditProfile/>}/>
+    
     </Routes></BrowserRouter>
    </>
   )

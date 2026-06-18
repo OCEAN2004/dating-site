@@ -1,4 +1,5 @@
-
+import ProfilePage from "./profilePage";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import {
   Camera,
@@ -324,14 +325,17 @@ export default function EditProfile() {
             </div>
 
             {/* Buttons */}
+           
             <div className="flex justify-center gap-4 mt-10">
+                <Link to="/profile">
               <button className="px-8 py-3 border border-pink-400 text-pink-600 rounded-full hover:bg-pink-50">
                 Cancel
-              </button>
-
+              </button></Link>
+              <Link to="/profile">
               <button className="px-8 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600">
                 Save Changes
               </button>
+              </Link>
             </div>
           </div>
         </div>

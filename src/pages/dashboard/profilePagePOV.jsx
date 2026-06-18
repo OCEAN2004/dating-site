@@ -1,6 +1,4 @@
 import { useState } from "react";
-import EditProfile from "./editProfile";
-import { Link } from "react-router-dom";
 import {
   Pencil,
   User,
@@ -11,7 +9,7 @@ import {
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/sidebar";
 
-export default function ProfilePage() {
+export default function ProfilePagePOV() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const questions = [
@@ -108,22 +106,22 @@ export default function ProfilePage() {
             {/* User Info */}
             <div className="text-center mt-5">
               <h1 className="text-4xl font-bold text-pink-600">
-               fisrt last, 20
+                fisrt last, 20
               </h1>
 
               <p className="text-gray-500 mt-2 text-lg">
-                 Computer Science and Engineering • Junior
+                Computer Science and Engineering • Junior
               </p>
 
               <p className="text-pink-500 font-medium mt-1">
                 ABC University
               </p>
-               <Link to="/edit_profile">  
+               {/* <Link to="/edit_profile">  
               <button className="mt-5 px-8 py-3 border border-pink-500 text-pink-600 rounded-full flex items-center gap-2 mx-auto hover:bg-pink-50 transition">
                 <Pencil size={16} />
                 Edit Profile
               </button>
-                  </Link>
+                  </Link> */}
             </div>
 
             {/* About + Interests */}
