@@ -28,7 +28,7 @@ function App() {
     <Route path="/interests" element={<Interests/>}/>
     <Route path="/home" element={<DashboardHome/>}/>
     <Route path="/profile" element={<ProfilePage/>}/>
-     <Route path="/editpf" element={<EditProfile/>}/>
+     <Route path="/edit_profile" element={<EditProfile/>}/>
     </Routes></BrowserRouter>
    </>
   )

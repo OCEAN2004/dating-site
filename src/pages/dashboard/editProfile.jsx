@@ -120,67 +120,92 @@ export default function EditProfile() {
                 Edit Profile
               </h1>
 
-              <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mt-8">
-                <input
-                  defaultValue="name"
-                  className="px-4 py-3 border border-pink-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-300"
-                />
+             <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto mt-8">
 
-                <input
-                  defaultValue="name"
-                  className="px-4 py-3 border border-pink-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-300"
-                />
+  <div className="flex flex-col">
+    <label className="text-left text-gray-700 font-medium mb-2">
+      First Name
+    </label>
 
-                <input
-                  type="number"
-                  defaultValue="20"
-                  className="px-4 py-3 border border-pink-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-300"
-                />
-              </div>
+    <input
+      defaultValue="Name"
+      className="w-full px-4 py-3 border border-pink-200 rounded-xl"
+    />
+  </div>
 
-              <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mt-4">
-                <select className="px-4 py-3 border border-pink-200 rounded-xl">
-                  <option>Computer Science and Engineering</option>
-              <option>Electronics and Communication Engineering</option>
-              <option>Mechanical Engineering</option>
-              <option>Electrical Engineering</option>
-              <option>Civil Engineering</option>
-              <option>Mathematics and Computing</option>
-              <option>Mining Engineering</option>
-              <option>Mining Machinery Engineering</option>
-                </select>
+  <div className="flex flex-col">
+    <label className="text-left text-gray-700 font-medium mb-2">
+      Last Name
+    </label>
 
-                <select className="px-4 py-3 border border-pink-200 rounded-xl">
-                  <option>Freshman</option>
-                  <option>Sophomore</option>
-                  <option selected>Junior</option>
-                  <option>Senior</option>
-                </select>
+    <input
+      defaultValue="Name"
+      className="w-full px-4 py-3 border border-pink-200 rounded-xl"
+    />
+  </div>
 
-                <input
-                  disabled
-                  value="ABC University"
-                  className="px-4 py-3 bg-gray-100 border border-pink-200 rounded-xl cursor-not-allowed"
-                />
-              </div>
-             
-             {/* Gender */}
-<div className="max-w-3xl mx-auto mt-6">
-  <p className="font-medium text-gray-700 mb-3">
-    Gender
-  </p>
+  <div className="flex flex-col">
+    <label className="text-left text-gray-700 font-medium mb-2">
+      Age
+    </label>
 
-  <select
-    value={gender}
-    onChange={(e) => setGender(e.target.value)}
-    className="w-full px-4 py-3 border border-pink-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-300"
-  >
-    <option>Male</option>
-    <option>Female</option>
-    <option>Non-Binary</option>
-    <option>Other</option>
-  </select>
+    <input
+      type="number"
+      defaultValue="20"
+      className="w-full px-4 py-3 border border-pink-200 rounded-xl"
+    />
+  </div>
+
 </div>
+
+             <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto mt-4">
+
+  <div className="flex flex-col gap-2">
+    <label className="text-left text-gray-700 font-medium">
+      Department
+    </label>
+
+    <select className="w-full px-4 py-3 border border-pink-200 rounded-xl">
+      <option>Computer Science and Engineering</option>
+      <option>Electronics and Communication Engineering</option>
+      <option>Mechanical Engineering</option>
+      <option>Electrical Engineering</option>
+      <option>Civil Engineering</option>
+      <option>Mathematics and Computing</option>
+      <option>Mining Engineering</option>
+      <option>Mining Machinery Engineering</option>
+    </select>
+  </div>
+
+  <div className="flex flex-col gap-2">
+    <label className="text-left text-gray-700 font-medium">
+      Year of Study
+    </label>
+
+    <select className="w-full px-4 py-3 border border-pink-200 rounded-xl">
+      <option>Freshman</option>
+      <option>Sophomore</option>
+      <option>Junior</option>
+      <option>Senior</option>
+    </select>
+  </div>
+
+  <div className="flex flex-col gap-2">
+    <label className="text-left text-gray-700 font-medium">
+      Gender
+    </label>
+
+    <select className="w-full px-4 py-3 border border-pink-200 rounded-xl">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Non-Binary</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+</div>
+             
+            
               {/* Interested In */}
               <div className="max-w-3xl mx-auto mt-6">
                 <p className="font-medium text-gray-700 mb-3">
